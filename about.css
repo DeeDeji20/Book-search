@@ -1,0 +1,179 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navClass {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+}
+
+.nav {
+    background-color: rgb(112, 246, 112);
+}
+
+.navLinks a {
+    text-decoration: none;
+    color: #333;
+    letter-spacing: 2px;
+}
+
+.navLinks li {
+    list-style: none;
+}
+
+.navLinks a:nth-child(2) {
+    color: white;
+}
+
+.logo {
+    letter-spacing: 3px;
+    font-size: 20px;
+}
+
+.bookImg {
+    background-image: url(./img/pexels-karolina-grabowska-4219038.jpg);
+    height: 50vh;
+    background-position: center;
+    background-size: cover;
+    animation: animate 20s ease-in-out infinite;
+    position: relative;
+    z-index: -1;
+}
+
+.abtHeading {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 40px;
+    margin-top: 10%;
+    animation: slide 20s ease-in-out infinite;
+}
+
+@keyframes animate {
+    0%,
+    100% {
+        background-image: url(./img/pexels-mentatdgt-1319855.jpg);
+    }
+    25% {
+        background-image: url(./img/pexels-pixabay-256541.jpg);
+    }
+    50% {
+        background-image: url(./img/design-desk-display-eyewear-313690.jpg);
+    }
+    75% {
+        background-image: url(./img/pexels-karolina-grabowska-4219038.jpg);
+    }
+}
+
+@keyframes slide {
+    0%,
+    100% {
+        color: #333;
+    }
+    25% {
+        color: red;
+    }
+    50% {
+        color: rgb(112, 246, 112);
+    }
+    75% {
+        color: brown;
+    }
+}
+
+.abtUs,
+.cat p {
+    line-height: 20px;
+    width: 95%;
+    margin: 20px auto;
+}
+
+.abtUs p {
+    font-size: 17px;
+    letter-spacing: .2px;
+    text-align: left;
+    justify-content: center;
+}
+
+.abtUs span {
+    font-weight: bold;
+}
+
+.cat h1 {
+    margin: 10px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.bookCover {
+    display: flex;
+    width: 95%;
+    margin: 10px auto;
+}
+
+.coverImg {
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.categories li {
+    list-style: none;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    text-align: center;
+    color: #333;
+    font-size: 20px;
+}
+
+.fa {
+    margin-right: 10px;
+    color: rgb(112, 246, 112);
+    font-size: 20px;
+}
+
+.catContainer {
+    width: 95%;
+    padding: 20px;
+    margin: 40px auto;
+    background-color: rgb(235, 231, 231);
+    border-radius: 10px;
+}
+
+.categories {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    margin: 10px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: rgb(112, 246, 112);
+}
+
+@media(max-width:812px) {
+    .categories {
+        display: flex;
+        flex-direction: column;
+    }
+    .abtHeading {
+        margin-top: 30%;
+    }
+    .bookCover {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
