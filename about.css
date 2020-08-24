@@ -37,6 +37,14 @@ p {
     color: white;
 }
 
+.navLinks a:nth-child(2):hover {
+    color: black;
+}
+
+.navLinks a:nth-child(1):hover {
+    color: #fff;
+}
+
 .logo {
     letter-spacing: 3px;
     font-size: 20px;
