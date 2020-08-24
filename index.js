@@ -1,12 +1,16 @@
 const claearBtn = document.querySelector('#clear');
 claearBtn.addEventListener("click", clearAll);
-const emptyCon = document.querySelector("#emptyContainer")
+const empty = document.querySelector(".empty")
 
 function clearAll() {
-    emptyCon.innerHTML = '';
+    empty.innerHTML = '';
 }
 
-
+// document.addEventListener("keyup", (e) => {
+//     if (e.keyCode == 13) {
+//         getSearch
+//     }
+// })
 
 const btn6 = document.querySelector('#btn6');
 btn6.addEventListener('click', getSearch);
@@ -17,7 +21,6 @@ function getSearch() {
     fetch(`https://www.googleapis.com/books/v1/volumes?q=${text}`)
         .then((res) => res.json())
         .then((data) => {
-            text.replace(' ', '+')
 
             // const head = document.createElement('h1');
             // const headText = document.createTextNode(`Search Result for ${text}`);
@@ -37,8 +40,6 @@ const searchBtn = document.querySelector('#search');
 searchBtn.addEventListener('click', getCategory);
 
 function getCategory() {
-    const contain = document.querySelector(".contain")
-        //contain.innerHTML = '';
 
     const category = document.querySelector('#catSelect').value;
 
@@ -58,7 +59,6 @@ const enterSearch = (data) => {
     const empty = document.querySelector(".empty");
     empty.innerHTML = '';
 
-    // const headText = document.createTextNode("Search result");
     for (let i = 0; i < data.items.length; i++) {
 
 

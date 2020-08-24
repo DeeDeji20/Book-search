@@ -19,4 +19,3 @@ const fetchCover = () => {
 }
 
 window.onload = fetchCover;
-document.querySelector("#bookCover")

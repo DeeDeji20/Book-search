@@ -8,6 +8,10 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+p {
+    font-size: 15px;
+}
+
 .navClass {
     display: flex;
     justify-content: space-around;
@@ -36,6 +40,7 @@ body {
 .logo {
     letter-spacing: 3px;
     font-size: 20px;
+    text-transform: uppercase;
 }
 
 .bookImg {
@@ -97,10 +102,12 @@ body {
 }
 
 .abtUs p {
-    font-size: 17px;
+    font-size: 15px;
     letter-spacing: .2px;
     text-align: left;
     justify-content: center;
+    width: 100%;
+    margin: auto;
 }
 
 .abtUs span {
@@ -131,7 +138,7 @@ body {
     border-radius: 15px;
     text-align: center;
     color: #333;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .fa {
@@ -152,7 +159,7 @@ body {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 10px;
+    grid-gap: 20px;
     margin: 10px;
 }
 
@@ -173,7 +180,8 @@ body {
         margin-top: 30%;
     }
     .bookCover {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: auto;
     }
 }
